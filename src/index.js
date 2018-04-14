@@ -8,8 +8,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { getStore } from './getStore';
 
 
-import App from './components/app';
-import reducers from './reducers';
+import App from './Root/components/app';
+import reducers from './Root/reducers';
 
 
 const store = getStore();
@@ -18,6 +18,8 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render((
     <Provider store={store}>
+        <BrowserRouter>
         <App />
+        </BrowserRouter>
     </Provider>
 ), document.querySelector('.root'));

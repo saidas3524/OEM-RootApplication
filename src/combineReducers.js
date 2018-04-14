@@ -1,5 +1,9 @@
-import  * as reducers from './reducers';
+import  {RootReducers} from './Root';
+
 import { fromJS } from 'immutable';
+import { PricingReducers } from 'oem-pricingcapability';
+
+const reducers = {...RootReducers,...PricingReducers};
 
 export const combineReducers = (config) =>{
 

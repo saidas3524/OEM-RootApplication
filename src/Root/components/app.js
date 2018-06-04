@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './styles/microsoft-oem-doc-styles.css';
 import  { Home,Order,Cbr, } from './Components';
 import Header from './Header';
 import { Redirect, Switch, Route } from 'react-router-dom';
@@ -19,14 +20,14 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Switch>
+        {/* <Switch>
           <Route exact path='/' component={Home} />
           <Route  path='/pricing' component={PricingRootComponent} />
           <Route path='/order' component={Order} />
 
           <Route path='/cbr' component={Cbr} />
         </Switch>
-        
+         */}
       </div>
     );
   }
